@@ -6,12 +6,14 @@ const buttons = document.querySelectorAll("button");
 // for calculator
 const array = Array.from(buttons);
 let string = "";
+let string2 = "";
 array.forEach((button) => {
   button.addEventListener("click", (e) => {
     if (e.target.innerHTML === "=") {
-      let string2 = eval(string);
-      result.value = string2;
-      addCalculation(string, result.value);
+      let string2 = string;
+      string = eval(string);
+      result.value = string;
+      addCalculation(string2, result.value);
     } else if (e.target.innerHTML == "AC") {
       string = "";
       result.value = "";
