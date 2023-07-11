@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(255, 157, 0, 0.694);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+}
+
+/* for calculator */
+.container {
+  width: 400px;
+  background: black;
+  box-shadow: 15px 15px 22px -1px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+.header {
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .header h2 {
+  padding: 15px;
+}
+.container .header i {
+  padding: 15px;
+}
+input {
+  width: 100%;
+  background: black;
+  border: none;
+  outline: none;
+}
+.display {
+  font-size: 55px;
+  color: whitesmoke;
+  text-align: end;
+  margin-right: 15px;
+  padding: 15px;
+}
+
+.result {
+  font-size: 30px;
+  color: rgb(193, 193, 193);
+  text-align: end;
+  margin-right: 15px;
+  padding: 15px;
+}
+
+.button {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 5px;
+  background-color: rgb(63, 63, 63);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.button button {
+  margin: 5px;
+  color: whitesmoke;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 20px 20px;
+  box-shadow: -8px -8px 15px rgba(53, 53, 53, 0.5);
+}
+
+button:hover {
+  border-radius: 5px;
+  background-color: rgb(53, 53, 53);
+}
+button:active {
+  border-radius: 10px;
+  background-color: rgb(73, 73, 73);
+}
+.operator {
+  color: rgb(255, 157, 0);
+}
+#equal {
+  background-color: rgb(255, 157, 0);
+  color: whitesmoke;
+  border-radius: 2px;
+  grid-column: 3 / span 2;
+}
+#equal:active {
+  background-color: rgb(255, 170, 10);
+  color: whitesmoke;
+  border-radius: 2px;
+}
+
+/* for date and time  */
+.date-container {
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  text-align: center;
+  border: 2px solid whitesmoke;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* for history  */
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.popup-container.active {
+  display: flex;
+}
+.popup {
+  background-color: rgb(19, 15, 15);
+  border: 2px solid white;
+  width: 300px;
+  border-radius: 5px;
+  position: relative;
+}
+.popup .header {
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup .header h2 {
+  padding: 15px;
+}
+#history {
+  font-size: large;
+  font-weight: bold;
+  padding: 15px;
+}
+#close {
+  margin-right: 15px;
+  padding: 5px 15px;
+  background-color: rgb(255, 157, 0);
+  border: none;
+  border-radius: 2px;
+  font-size: 20px;
+  font-weight: bolder;
+}

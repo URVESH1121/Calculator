@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- for date and time -->
+    <div class="date-container">
+      <div class="date" id="date"></div>
+      <div class="time" id="time"></div>
+    </div>
+    <!-- for Calculator -->
+    <div class="container">
+      <div class="header">
+        <h2>Calculator</h2>
+        <i class="fa-solid fa-clock-rotate-left" id="historybtn"></i>
+      </div>
+      <div class="calculator">
+        <input type="text" class="display" id="display" readonly />
+        <input
+          type="text"
+          class="result"
+          id="result"
+          placeholder="0"
+          readonly
+        />
+      </div>
+      <div class="button">
+        <button>AC</button>
+        <button>C</button>
+        <button>%</button>
+        <button class="operator">/</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">*</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="operator">-</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="operator">+</button>
+        <button>.</button>
+        <button>0</button>
+        <button class="operator" id="equal">=</button>
+      </div>
+    </div>
+
+    <!-- for history  -->
+    <div class="popup-container">
+      <div class="popup">
+        <div class="header">
+          <h2>History</h2>
+          <div id="close">x</div>
+        </div>
+        <p id="history"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
