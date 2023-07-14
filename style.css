@@ -154,3 +154,10 @@ button:active {
   font-size: 20px;
   font-weight: bolder;
 }
+
+#historyButton{
+  border: 2px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

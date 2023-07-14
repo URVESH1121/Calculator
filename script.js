@@ -7,17 +7,18 @@ const buttons = document.querySelectorAll("button");
 const array = Array.from(buttons);
 let string = "";
 let string2 = "";
-array.forEach((button) => {
+array.map((button) => {
   button.addEventListener("click", (e) => {
     if (e.target.innerHTML === "=") {
       let string2 = string;
-      string = eval(string);
+      string = eval(string).toFixed(2);
       result.value = string;
       addCalculation(string2, result.value);
     } else if (e.target.innerHTML == "AC") {
       string = "";
       result.value = "";
       display.value = string;
+      localStorage.clear();
     } else if (e.target.innerHTML == "C") {
       string = string.substring(0, string.length - 1);
       display.value = string;
@@ -81,8 +82,6 @@ function showHistory() {
   }
 }
 
-showHistory();
-
 // for popup
 const historybtn = document.getElementById("historybtn");
 const close = document.getElementById("close");
@@ -90,6 +89,8 @@ const popup = document.querySelector(".popup-container");
 
 historybtn.addEventListener("click", () => {
   popup.classList.add("active");
+  document.getElementById("history").innerHTML = "";
+  showHistory();
 });
 close.addEventListener("click", () => {
   popup.classList.remove("active");
